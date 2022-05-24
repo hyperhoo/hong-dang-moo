@@ -66,6 +66,14 @@ client 폴더에서
 > npm init
 
 헤로쿠에서는 start 명령이 60초 이내에 빌드를 끝내고 실행을 해야하는 제약이 있다.
-모든 과정을 한번에 처리하면 시간이 초과 될수 있기 때문에 
+모든 과정을 한번에 처리하면 시간이 초과 될수 있기 때문에
 과정을 몇개로 나누어서 처리한다. 즉 start 스크립트 전에 미리 build를 마무리한다.
 
+github connect를 하면 2022.05.24 기준 heroku의 보안 정책 변경으로 인해 연결이 되지 않는다.
+아래 블로그를 참조해서 cli로 heroku에 배포를 진행한다.
+
+- https://jihyuns-today.tistory.com/m/entry/Heroku-Heroku-app%EA%B3%BC-Git-%EC%97%B0%EB%8F%99%EC%8B%9C-%EC%97%90%EB%9F%AC-Items-could-not-be-retrieved-Internal-server-error
+
+tsconfig.json 파일에서 outdir 설정하고 js 파일을 dist 폴더에 따로 컴파일되도록 설정한다.
+
+> npm i -D typescript
